@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Flexbox</title>
+  <link rel="stylesheet" type="text/css" href="./css/example.css">
+</head>
+
+<body>
+  <h1>Flex-box</h1>
+  <p> Las principales propiedades del contenedor flex son <b>flex-direction</b> y <b>flex-wrap</b>. La propiedad <b>flex-flow</b> es una abreviación de ambas</p>
+  <p> Las principales propiedades para los item que hay en un contenedor flex box son: <b>flex-grow</b>,<b>flex-shrink</b> y <b>flex-basis</b></p>
+  <p>
+    Cuando se añade la propiedad <b>flex</b> o <b>inline-flex</b>, se tiene una configuración por defecto que muestra los hijos como
+    <b>flew-direction: row</b>,
+    <b>flew-wrap: nowrap</b>,
+    <b>flex-basis:auto</b>
+    <b>flex-shrink:1</b>
+  </p>
+  <p>Con la configuración por defecto los items dentro del contenedor flex ajustan su tamaño a su contenido(de ellos mismos).</p>
+  <div id="main01">
+    <div style="background-color:coral;">1 - div</div>
+    <div style="background-color:lightblue;">2 - div</div>
+    <div style="background-color:khaki;">3 -div</div>
+    <div style="background-color:pink;">4 - div</div>
+    <div style="background-color:lightgrey;">5 - div</div>
+  </div>
+
+  <p>Se puede cambiar la dirreción de los elementos del contenedor con <b>flow-direction:column</b></p>
+  <div id="main05">
+      <div style="background-color:coral;">1 - div</div>
+      <div style="background-color:lightblue;">2 - div</div>
+      <div style="background-color:khaki;">3 -div</div>
+      <div style="background-color:pink;">4 - div</div>
+      <div style="background-color:lightgrey;">5 - div</div>
+    </div>
+
+
+  <p>
+    Se puede apreciar como los elementos ajustan su tamaño al tamaño del contenedor
+  </p>
+  <div id="main02">
+    <div style="background-color:coral;">1 - div</div>
+    <div style="background-color:lightblue;">2 - div</div>
+    <div style="background-color:khaki;">3 -div</div>
+    <div style="background-color:pink;">4 - div</div>
+    <div style="background-color:lightgrey;">5 - div</div>
+    <div style="background-color:Fuchsia;">6 - div</div>
+    <div style="background-color:MediumPurple;">7 - div</div>
+    <div style="background-color:LawnGreen;">8 - div</div>
+    <div style="background-color:Cyan;">9 - div</div>
+    <div style="background-color:Goldenrod;">10 - div</div>
+    <div style="background-color:Maroon;">11 - div</div>
+  </div>
+
+  <p>
+    Con la propiedad  <b>flex-wrap: wrap;</b> en el contenedor padre y la propiedad
+    <b>flex-basis: 80px</b> en los container hijos, ahora se establece un tamaño fijo para los hijos y si no entran se colocan una fila mas abajo
+  </p>
+  <div id="main03">
+      <div style="background-color:coral;">1 - div</div>
+      <div style="background-color:lightblue;">2 - div</div>
+      <div style="background-color:khaki;">3 -div</div>
+      <div style="background-color:pink;">4 - div</div>
+      <div style="background-color:lightgrey;">5 - div</div>
+    </div>
+
+  <p>Estableciendo la propiedad <b>flex-shrink:0</b> no se le permite a los elementos hijos ajustarse al tamaño del contenedor padre, haciendo un overflow</p>
+  <div id="main04">
+      <div style="background-color:coral;">1 - div</div>
+      <div style="background-color:lightblue;">2 - div</div>
+      <div style="background-color:khaki;">3 -div</div>
+      <div style="background-color:pink;">4 - div</div>
+      <div style="background-color:lightgrey;">5 - div</div>
+    </div>
+  <p>Cuando esta propiedad esta en un valor positivo y en el contenedor padre no se dispone de suficiente espacio en el contenedor flex, los item se contraen para ajustarse al tamaño</p>
+  <p>Con diferentes numeros positivos en esta propiedad se puee establecer la proporcio a ocupar en el contenedor</p>
+  <div id="main06">
+      <div style="background-color:coral;flex-shrink:1;">1 - div</div>
+      <div style="background-color:lightblue;flex-shrink:2;">2 - div</div>
+      <div style="background-color:khaki;flex-shrink:2;">3 -div</div>
+      <div style="background-color:pink;flex-shrink:2;">4 - div</div>
+      <div style="background-color:lightgrey;flex-shrink:2;">5 - div</div>
+    </div>
+
+  <p> Con la propiedad <b>flex-grow</b>  con un entero positivo,los item dentro del contenedor crecen. Al igual que <b>flex-shrink</b> acepta diferentes positivos para ajustar la proporcion </p>
+  <div id="main07">
+      <div style="background-color:coral;">1 - div</div>
+      <div style="background-color:lightblue;">2 - div</div>
+      <div style="background-color:khaki;">3 -div</div>
+      <div style="background-color:pink;">4 - div</div>
+      <div style="background-color:lightgrey;">5 - div</div>
+    </div>
+
+    <hr>
+
+    <p> Las propiedades <b>flex-grow</b>, <b>flex-shrink</b> y <b>flex-basis</b>, se pueden usar bajo una misma propiedad, <b>flex</b>
+      El orden de los valores en esta propiedad es como se han listado en la frase anterior.
+      Así dandole un valor positivo  <b>flex-grow</b>,  se indica que el elemento puede crecer.
+      Dandole un valor positivo  <b>flex-shrink</b>,  se indica que el elemento puede contraerse.
+      Por ultimo <b>flex-basis</b> es el valor base que usan los item para crecer o contraerse.
+    </p>
+
+    <p>Hay abreviaturas que aglutinan a estas tres pripiedades:</p>
+    <ul>
+      <li><b>flex:initial</b>: Es como  se establece inicialmente los valores de Flexbox, ya que equivale a flex: 0 1 auto</li>
+      <li><b>flex:auto</b>: Equivale flex: 1 1 auto</li>
+      <li><b>flex:none</b>: Los items creados no serán flexibles ya que equivale flex: 0 0 auto</li>
+      <li><b>flex:(numero positivo)</b> En función del numero que se ponga equivaldrá a, flex: x, x, auto;</li>
+    </ul>
+
+    <hr>
+    <p>Flexbox tiene gran capacidad a la hora de alinear los item tanto en el eje X como en el Y.</p>
+    <p>Para alinear los item sobre el eje de la Y existe la propiedad <b>align-items</b>. Por defecto (valor: strech) se ajustan a la altura del mayor item </p>
+    <p>Los diferentes valores que puede tomar son</p>
+    <ul>
+      <li><p><b>stretch</b>, rellena  los item verticalmente los item hasta cubrir el contenedor</p>
+        <div id="main08">
+            <div style="background-color:coral;">1 - div</div>
+            <div style="background-color:lightblue;">2 - div</div>
+            <div style="background-color:khaki;">Este es el div mas grande</div>
+            <div style="background-color:pink;">4 - div</div>
+            <div style="background-color:lightgrey;">5 - div</div>
+          </div>
+      </li>
+      <li><p><b>flex-start</b>, ajusta el contenido vertical en la parte superior</p>
+        <div id="main09">
+            <div style="background-color:coral;">1 - div</div>
+            <div style="background-color:lightblue;">2 - div</div>
+            <div style="background-color:khaki;">Este es el div mas grande</div>
+            <div style="background-color:pink;">4 - div</div>
+            <div style="background-color:lightgrey;">5 - div</div>
+          </div>
+      </li>
+      <li><p><b>flex-end</b>, ajusta el contenido horizontalment en la parte inferior</p>
+        <div id="main10">
+            <div style="background-color:coral;">1 - div</div>
+            <div style="background-color:lightblue;">2 - div</div>
+            <div style="background-color:khaki;">Este es el div mas grande</div>
+            <div style="background-color:pink;">4 - div</div>
+            <div style="background-color:lightgrey;">5 - div</div>
+          </div>
+      </li>
+      <li><p><b>center</b>, ajusta el contenido en la mitad del contenedor</p>
+        <div id="main11">
+            <div style="background-color:coral;">1 - div</div>
+            <div style="background-color:lightblue;">2 - div</div>
+            <div style="background-color:khaki;">Este es el div mas grande</div>
+            <div style="background-color:pink;">4 - div</div>
+            <div style="background-color:lightgrey;">5 - div</div>
+          </div>
+      </li>
+      
+      
+    </ul>
+    <hr>
+    <p>Para alinear los item sobre el eje de la X existe la propiedad <b>justify-content</b>. El valor inicial es <b>flex-start</b> </p>
+    <p>Los diferentes valores que puede tomar son</p>
+    <ul>
+      <li><p><b>flex-end</b>, mueven los elementos al final del contenedor</p>
+        <div id="main12">
+            <div style="background-color:coral;">1 - div</div>
+            <div style="background-color:lightblue;">2 - div</div>
+            <div style="background-color:khaki;">Este es el div mas grande</div>
+            <div style="background-color:pink;">4 - div</div>
+            <div style="background-color:lightgrey;">5 - div</div>
+          </div>
+      </li>
+      <li><p><b>center</b>, Centra todos los item </p>
+        <div id="main13">
+            <div style="background-color:coral;">1 - div</div>
+            <div style="background-color:lightblue;">2 - div</div>
+            <div style="background-color:khaki;">Este es el div mas grande</div>
+            <div style="background-color:pink;">4 - div</div>
+            <div style="background-color:lightgrey;">5 - div</div>
+          </div>
+      </li>
+      </li>
+      <li><p><b>space-aroun</b>, crea un espacio a izquierda y derecha de los item igual de manera proporcional.</p>
+        <div id="main14">
+            <div style="background-color:coral;">1 - div</div>
+            <div style="background-color:lightblue;">2 - div</div>
+            <div style="background-color:khaki;">Este es el div mas grande</div>
+            <div style="background-color:pink;">4 - div</div>
+            <div style="background-color:lightgrey;">5 - div</div>
+          </div>
+      </li>
+      <li><p><b>space-between</b>, Recoge todo el espacio sobrante entre elementos y lo distribuye de forma equitativa entre cada uno</p>
+        <div id="main15">
+            <div style="background-color:coral;">1 - div</div>
+            <div style="background-color:lightblue;">2 - div</div>
+            <div style="background-color:khaki;">Este es el div mas grande</div>
+            <div style="background-color:pink;">4 - div</div>
+            <div style="background-color:lightgrey;">5 - div</div>
+          </div>
+      </li>
+    </ul>
+    <hr>
+    <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceptos_Basicos_de_Flexbox">Referencia</a>
+</body>
+
+</html>
