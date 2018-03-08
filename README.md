@@ -13,4 +13,5 @@
 * https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout
 * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 * https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS
-
+* https://yoksel.github.io/flex-cheatsheet/#flex-wrap
+* https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceptos_Basicos_de_Flexbox
